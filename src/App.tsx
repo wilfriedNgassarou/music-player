@@ -2,6 +2,7 @@ import { useState } from "react"
 import { SmallPlayer } from "./components/small-player";
 import { BigPlayer } from "./components/big-player";
 import { MediumPlayer } from "./components/medium-player";
+import { Credits } from "./components/credits";
 
 function App() {
   const states = ['small', 'big', 'medium'] as const
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <section className="w-full h-dvh flex items-center justify-center font-medium">
+      <Credits />
       {
         activeState == 'small' && (
           <SmallPlayer 
